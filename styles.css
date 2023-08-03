@@ -1,15 +1,30 @@
 body {
   max-width: 600px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 4px;
+  text-align: center;
 }
 
 h2 {
   color: blueviolet;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
-  margin: 5px;
-  padding: 10px 10px;
+  margin: 5px auto;
+  padding: 10px auto;
   border-style: solid;
-  border-radius: 15px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  color: green;
+  margin: 5px auto;
+  padding: 20px auto;
+  border-style: solid;
+  border-radius: 10px;
 }
