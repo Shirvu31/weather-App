@@ -21,47 +21,64 @@
   <body>
     <h1>Welcome to SSB Weather Forecast</h1>
 
-    <form>
-      <div class="card">
-        <div class="container"></div>
+    <div class="container">
+      <div class="weather-app">
+        <h2>Weather Forecast</h2>
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
 
-        <input type="text" placeholder="Search for a city" />
-        <button class="btn btn-primary" type="button">Search</button>
-        <h2>
-          Durban <br />
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
 
-          Today 22° / 14°
-        </h2>
+       
+        <ul>
+          <h1 id="date"></h1>
+        </ul>
 
-        <div class="row" value="day">
-          <div class="col-2">Tomorrow</div>
-          <div class="col-2">Friday</div>
-          <div class="col-2">Saturday</div>
-          <div class="col-2">Sunday</div>
-          <div class="col-2">Monday</div>
-          <div class="col-2">Tuesday</div>
-        </div>
+       
+         
+                <h1>
+                <span id="city"></span> <br>
+                <span class="temperature" id="temperature">
+                    </span>
+                    <span class="units">°C</span>
+                </h1>
+    </div>
 
-        <div class="row" value="temp">
-          <div class="col-2">21° / 10°</div>
-          <div class="col-2">23° / 10°</div>
-          <div class="col-2">24° / 14°</div>
-          <div class="col-2">22° / 11°</div>
-          <div class="col-2">23° / 13°</div>
-          <div class="col-2">20° / 11°</div>
-        </div>
 
-        <div class="row" value="sticker">
-          <div class="col-2">☀</div>
-          <div class="col-2">☀</div>
-          <div class="col-2">☀</div>
-          <div class="col-2">🌥</div>
-          <div class="col-2">🌤</div>
-          <div class="col-2">🌥</div>
-        </div>
-      </div>
-    </form>
-
+    <p>
+         
+        Designed by Sushmitha Budhayee</p> 
+        <a
+          href="https://github.com/Shirvu31/New-Weather-App"
+          target="_blank"
+          class="coders"
+        >Open Source Code </a>
     <script src="index.js"></script>
   </body>
 </html>
