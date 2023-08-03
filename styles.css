@@ -1,50 +1,15 @@
-h1 {
-  text-align: center;
-  color: aquamarine;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-.day {
-  text-align: center;
-}
-.temp {
-  text-align: center;
-}
-
-.card {
-  background-color: #ccf9f8;
-  margin-left: 20px;
-  margin-right: 20px;
+body {
+  max-width: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h2 {
   color: blueviolet;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
-  margin: 20px 20px;
-  padding: 10px;
+  margin: 5px;
+  padding: 10px 10px;
   border-style: solid;
   border-radius: 15px;
-  margin: 10px 600px;
-}
-
-h1 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-align: center;
-  color: green;
-  margin: 10px 600px;
-  padding: 20px;
-  border-style: solid;
-  border-radius: 15px;
-}
-
-body {
-  max-width: 2000px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.sticker {
-  margin-bottom: 20px;
-  text-align: center;
 }
