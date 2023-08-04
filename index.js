@@ -1,14 +1,14 @@
-function formatDate(date) {
-  let hours = date.getHours();
+function formatDate(now) {
+  let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  let dayIndex = date.getDay();
+  let dayIndex = now.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -20,7 +20,31 @@ function formatDate(date) {
   ];
   let day = days[dayIndex];
 
-  return `${day} ${hours}:${minutes}`;
+  let date = now.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
+
+  let monthIndex = now.getMonth();
+  let months = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  let month = months[monthIndex];
+  let year = now.getFullYear();
+
+  return `Updated on ${day}, ${date} ${month} ${year} at ${hours}:${minutes}`;
 }
 
 function displayWeatherCondition(response) {
