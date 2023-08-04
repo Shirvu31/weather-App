@@ -53,6 +53,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemp = response.data.main.temp;
 }
 
 function displayForecast(response) {
@@ -121,10 +122,26 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-function displayFahTemp(event) 
+function displayFahTemp(event) {
+  event.preventDefault();
+
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+function displayCelTemp(event) {
+  event.preventDefault();
+
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link ");
-ahrenheitLink.addEventListener("click", displayFahTemp);
+fahrenheitLink.addEventListener("click", displayFahTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelTemp);
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
@@ -135,5 +152,7 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let celsiusTemp = null;
 
 searchCity("Durban");
