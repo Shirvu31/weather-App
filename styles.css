@@ -33,8 +33,7 @@ h1 {
   font-size: 18px;
 }
 
-p,
-a {
+p {
   text-align: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: grey;
@@ -47,4 +46,14 @@ a {
   position: relative;
   font-size: 45px;
   top: 5px;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  cursor: pointer;
 }
